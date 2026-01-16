@@ -1,0 +1,118 @@
+:root{
+  --bg:#eaf3ff;
+  --panel:#d6e9ff;
+  --btn:#c6e0ff;
+  --btnText:#0b2a4a;
+  --btnActive:#b6d6ff;
+  --ok:#99c6ff;
+  --danger:#ffb3b3;
+  --warn:#ffd7a8;
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color:#123;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px;
+}
+
+.app{ width:min(560px, 100%); }
+
+.title{
+  margin:0 0 10px;
+  font-size:20px;
+  color:#0b2a4a;
+}
+
+.card{
+  background: rgba(255,255,255,0.6);
+  border:2px solid rgba(11,42,74,0.15);
+  border-radius:14px;
+  padding:14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.prompt{
+  font-size:16px;
+  font-weight:700;
+  line-height:1.25;
+  padding:6px 6px 10px;
+  min-height:54px;
+}
+
+.muted{ opacity:.75; font-weight:500; }
+
+.display{
+  width:100%;
+  font-size:30px;
+  font-weight:800;
+  text-align:right;
+  padding:14px 12px;
+  border-radius:12px;
+  border:2px solid rgba(11,42,74,0.18);
+  outline:none;
+  background:#fff;
+  margin-bottom:12px;
+}
+
+.display:focus{
+  border-color: rgba(11,42,74,0.35);
+}
+
+.pad{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:10px;
+  background: var(--panel);
+  padding:12px;
+  border-radius:12px;
+  border:2px solid rgba(11,42,74,0.12);
+}
+
+button{
+  font-size:22px;
+  font-weight:800;
+  padding:14px 0;
+  border-radius:12px;
+  border:2px solid rgba(11,42,74,0.15);
+  background: var(--btn);
+  color: var(--btnText);
+  cursor:pointer;
+  user-select:none;
+}
+
+button:active{ background: var(--btnActive); }
+
+button.ok{ background: var(--ok); }
+button.danger{ background: var(--danger); }
+button.warn{ background: var(--warn); }
+
+button.zero{ grid-column: span 3; }
+
+.hidden{ display:none; }
+
+.final{
+  margin:0;
+  white-space:pre-wrap;
+  font-family: Consolas, monospace;
+  font-size:18px;
+  font-weight:800;
+  color:#0b2a4a;
+  padding:10px;
+}
+
+.big{
+  width:100%;
+  margin-top:12px;
+  padding:14px 0;
+  font-size:20px;
+}
+
+.hint{ margin:10px 2px 0; font-size:13px; }
+.footer{ margin-top:10px; font-size:12px; text-align:center; }

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Soboslikar i parketar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1 class="title">Soboslikar i parketar</h1>
+
+    <section id="calcView" class="card">
+      <div id="prompt" class="prompt">
+        <div id="promptLine1"></div>
+        <div id="promptLine2" class="muted"></div>
+      </div>
+
+      <input id="display" class="display" inputmode="decimal" autocomplete="off" placeholder="0" />
+
+      <div class="pad" role="group" aria-label="Tipkovnica">
+        <button data-key="7">7</button>
+        <button data-key="8">8</button>
+        <button data-key="9">9</button>
+        <button data-action="clear" class="danger">C</button>
+
+        <button data-key="4">4</button>
+        <button data-key="5">5</button>
+        <button data-key="6">6</button>
+        <button data-action="back" class="warn">⌫</button>
+
+        <button data-key="1">1</button>
+        <button data-key="2">2</button>
+        <button data-key="3">3</button>
+        <button data-action="ok" class="ok">OK</button>
+
+        <button data-key="0" class="zero">0</button>
+        <button data-key=".">.</button>
+      </div>
+
+      <p class="hint">
+        Tipke: <b>Enter</b> = OK, <b>Esc</b> = C, <b>Backspace</b> = ⌫
+      </p>
+    </section>
+
+    <section id="finalView" class="card hidden">
+      <pre id="finalText" class="final"></pre>
+      <button id="restartBtn" class="ok big">Novi obračun</button>
+    </section>
+
+    <footer class="footer muted">Dalibor Preprotić © 2026</footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
